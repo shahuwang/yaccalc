@@ -3,7 +3,7 @@ A simple calculator parser that use Golang's yacc tool
 
 # How to build
 
-go tool yacc -o yacc.go -p GoCalc gocalc.y
+go tool yacc -o yacc.go  gocalc.y
 
 go build yacc.go golex.go 
 
