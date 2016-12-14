@@ -23,7 +23,7 @@ type GoCalcLex struct {
 	Input  []byte
 }
 
-func (l *GoCalcLex) Lex(lval *GoCalcSymType) int {
+func (l *GoCalcLex) Lex(lval *yySymType) int {
 	var Str []rune
 	l.Status = INITIAL_STATUS
 	for l.Pos < len(l.Input) {

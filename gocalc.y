@@ -6,7 +6,8 @@ import(
     "os"
 )
 const(
-GoCalcDEBUG=1
+    Debug = 4
+    ErrorVerbose = true
 )
 %}
 
@@ -71,7 +72,7 @@ func main(){
     for scanner.Scan(){
         text := scanner.Text()
         text = fmt.Sprintf("%s\n", text)
-        GoCalcParse(&GoCalcLex{Input: []byte(text)})
+        yyParse(&GoCalcLex{Input: []byte(text)})
     }
 }
 
